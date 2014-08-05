@@ -1,5 +1,2 @@
-require "permpress/version"
-
-module Permpress
-  # Your code goes here...
-end
+require 'permpress/version'
+require 'permpress/cli'
