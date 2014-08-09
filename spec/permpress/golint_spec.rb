@@ -4,16 +4,14 @@ describe Permpress::GoLint do
   describe '#lint', :unit do
     let(:permpress_path){File.expand_path('../../..', __FILE__)}
 
-    context 'when config flag is not present' do
-      it 'executes command with expected arguments' do
-        expect(Permpress::Command).to receive(:new).with(
-          'fgt golint',
-          %w(good.go bad.go),
-          []
-        ).and_return(instance_double(Permpress::Command, run: nil))
+    it 'executes command with expected arguments' do
+      expect(Permpress::Command).to receive(:new).with(
+        'fgt golint',
+        %w(good.go bad.go),
+        []
+      ).and_return(instance_double(Permpress::Command, run: nil))
 
-        Permpress::GoLint.start(['lint', 'good.go', 'bad.go'])
-      end
+      Permpress::GoLint.start(['lint', 'good.go', 'bad.go'])
     end
   end
 
