@@ -11,6 +11,7 @@ require_relative 'scsslint'
 require_relative 'jsonlint'
 
 module Permpress
+  # Main CLI that controls all other linters
   class CLI < Thor
     # Ruby
     register Permpress::RuboCop, 'rubocop', 'rubocop', 'Invokes Rubocop'

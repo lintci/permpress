@@ -4,24 +4,24 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'permpress/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "permpress"
+  spec.name          = 'permpress'
   spec.version       = Permpress::VERSION
-  spec.authors       = ["Allen Madsen"]
-  spec.email         = ["blatyo@gmail.com"]
-  spec.summary       = %q{Handles execution of linters}
-  spec.description   = %q{Handles execution of linters}
-  spec.homepage      = ""
-  spec.license       = "MIT"
+  spec.authors       = ['Allen Madsen']
+  spec.email         = ['blatyo@gmail.com']
+  spec.summary       = 'Handles execution of linters'
+  spec.description   = 'Handles execution of linters'
+  spec.homepage      = ''
+  spec.license       = 'MIT'
 
-  spec.files         = `git ls-files -z`.split("\x0")
+  spec.files         = `git ls-files -z`.split('\x0')
   spec.executables   = spec.files.grep(%r{^bin/}) { |f| File.basename(f) }
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
-  spec.require_paths = ["lib"]
+  spec.require_paths = ['lib']
 
   spec.add_runtime_dependency 'thor'
   spec.add_runtime_dependency 'bundler'
 
-  spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_development_dependency "rspec"
+  spec.add_development_dependency 'rake', '~> 10.0'
+  spec.add_development_dependency 'rspec'
   spec.add_development_dependency 'pry-byebug'
 end

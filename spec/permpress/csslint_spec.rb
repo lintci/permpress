@@ -46,7 +46,8 @@ describe Permpress::CSSLint do
         expect{Permpress::CLI.start(['csslint', 'lint', file])}.to_not exit_successfully
 
         expect($stdout.string).to eq(
-          "#{file}: line 2, col 5, Error - Using width with border can sometimes make elements larger than you expect.\n\n"
+          "#{file}: line 2, col 5, Error - Using width with border can sometimes"\
+          " make elements larger than you expect.\n\n"
         )
       end
     end

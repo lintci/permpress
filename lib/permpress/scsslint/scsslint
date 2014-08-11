@@ -1,0 +1,37 @@
+#!/usr/bin/env ruby
+
+require 'scss_lint'
+require 'scss_lint/cli'
+
+module SCSSLint
+  class Reporter
+    # Formats SCSS Lint output for LintCI
+    class LintCIReporter < Reporter
+      LINE_FORMAT = "%s:%d:%d:%d:%s:%s:%s\n"
+
+      def report_lints
+        return unless lints.any?
+
+        lints.map{|lint| LINE_FORMAT % variables(lint)}.join('')
+      end
+
+      def variables(lint)
+        file = lint.filename
+        line = lint.location.line
+        column = lint.location.column
+        length = lint.location.length
+
+        rule = lint.linter ? lint.linter.name : ''
+        severity = lint.severity.to_s
+        message = lint.description
+
+        [file, line, column, length, rule, severity, message]
+      end
+    end
+  end
+end
+
+SCSSLint::CLI.new(ARGV).tap do |cli|
+  cli.parse_arguments
+  cli.run
+end

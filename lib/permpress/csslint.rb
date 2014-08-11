@@ -2,6 +2,7 @@ require 'thor'
 require_relative 'command'
 
 module Permpress
+  # CSS Lint subcommand. Calls CSS Lint with the correct arguments.
   class CSSLint < Thor
     desc 'lint [FILES]', 'Runs linter'
     method_option :config, banner: 'CONFIG_FILE'
@@ -15,7 +16,7 @@ module Permpress
     def flags
       [
         "--errors=#{RULES}",
-        "--format=compact"
+        '--format=compact'
       ].tap do |flags|
         flags.concat(["--config=#{options[:config]}"]) if options[:config]
       end

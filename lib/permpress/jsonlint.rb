@@ -2,6 +2,7 @@ require 'thor'
 require_relative 'command'
 
 module Permpress
+  # JSON Lint subcommand. Calls durable-json-lint with correct arguments.
   class JSONLint < Thor
     desc 'lint [FILES]', 'Runs linter'
 

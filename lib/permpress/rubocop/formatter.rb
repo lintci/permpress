@@ -1,5 +1,6 @@
 module Permpress
   class Rubocop
+    # Formats Rubocop output for LintCI
     class Formatter < ::RuboCop::Formatter::BaseFormatter
       LINE_FORMAT = "%s:%d:%d:%d:%s:%s:%s\n"
 

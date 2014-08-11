@@ -2,6 +2,7 @@ require 'thor'
 require_relative 'command'
 
 module Permpress
+  # Rubocop subcommand. Calls Rubocop with correct arguments.
   class RuboCop < Thor
     FORMATTER_PATH = File.expand_path('../rubocop/formatter.rb', __FILE__)
 

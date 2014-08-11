@@ -2,6 +2,7 @@ require 'open3'
 require 'shellwords'
 
 module Permpress
+  # Generic command interface to execute a command with it's arguments, pipe the output, and exit correctly.
   class Command
     attr_reader :executable, :files, :options
 
