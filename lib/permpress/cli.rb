@@ -6,6 +6,7 @@ require_relative 'jslint'
 require_relative 'coffeelint'
 require_relative 'golint'
 require_relative 'govet'
+require_relative 'checkstyle'
 require_relative 'csslint'
 require_relative 'scsslint'
 require_relative 'jsonlint'
@@ -26,6 +27,9 @@ module Permpress
     # Go
     register Permpress::GoLint, 'golint', 'golint', 'Invokes golint'
     register Permpress::GoVet, 'govet', 'govet', 'Invokes go vet'
+
+    # Java
+    register Permpress::Checkstyle, 'checkstyle', 'checkstyle', 'Invokes Checkstyle'
 
     # CSS
     register Permpress::CSSLint, 'csslint', 'csslint', 'Invokes csslint'
