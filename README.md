@@ -20,6 +20,32 @@ Or install it yourself as:
 
 ## Usage
 
+The following request that you have all dependencies installed
+
+``` bash
+permpress checkstyle lint (--config=CONFIGURATION_FILE) [FILES]
+permpress coffeelint lint (--config=CONFIGURATION_FILE) [FILES]
+permpress csslint lint [FILES]
+permpress golint lint (--config=CONFIGURATION_FILE) [FILES]
+permpress jshint lint (--config=CONFIGURATION_FILE) [FILES]
+permpress jsonlint lint (--config=CONFIGURATION_FILE) [FILES]
+permpress rubocop lint (--config=CONFIGURATION_FILE) [FILES]
+permpress scsslint lint (--config=CONFIGURATION_FILE) [FILES]
+```
+
+### Dependencies
+
+* node/npm
+  * coffeelint
+  * csslint
+  * durable-json-lint-cli
+  * jshint
+* java
+* go
+  * golint
+* ruby
+  * rubocop
+  * scsslint
 
 ## Contributing
 
