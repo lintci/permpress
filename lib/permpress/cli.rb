@@ -19,14 +19,14 @@ module Permpress
 
     # JS
     register Permpress::JSHint, 'jshint', 'jshint', 'Invokes JSHint'
-    register Permpress::JSLint, 'jslint', 'jslint', 'Invokes JSLint'
+    # register Permpress::JSLint, 'jslint', 'jslint', 'Invokes JSLint'
 
     # CoffeeScript
     register Permpress::CoffeeLint, 'coffeelint', 'coffeelint', 'Invokes coffeelint'
 
     # Go
     register Permpress::GoLint, 'golint', 'golint', 'Invokes golint'
-    register Permpress::GoVet, 'govet', 'govet', 'Invokes go vet'
+    # register Permpress::GoVet, 'govet', 'govet', 'Invokes go vet'
 
     # Java
     register Permpress::Checkstyle, 'checkstyle', 'checkstyle', 'Invokes Checkstyle'
