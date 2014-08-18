@@ -1,6 +1,6 @@
 # Permpress
 
-TODO: Write a gem description
+A CLI to wrap the inconsistencies of various linters.
 
 ## Installation
 
@@ -20,7 +20,6 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
 
 ## Contributing
 

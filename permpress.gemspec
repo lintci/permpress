@@ -8,9 +8,9 @@ Gem::Specification.new do |spec|
   spec.version       = Permpress::VERSION
   spec.authors       = ['Allen Madsen']
   spec.email         = ['blatyo@gmail.com']
-  spec.summary       = 'Handles execution of linters'
-  spec.description   = 'Handles execution of linters'
-  spec.homepage      = ''
+  spec.summary       = 'Standardizes execution of various linters.'
+  spec.description   = 'Standardizes execution of various linters.'
+  spec.homepage      = 'https://github.com/lintci/permpress'
   spec.license       = 'MIT'
 
   spec.files         = `git ls-files -z`.split('\x0')
