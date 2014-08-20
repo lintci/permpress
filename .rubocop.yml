@@ -5,7 +5,7 @@ AllCops:
 Style/AccessModifierIndentation:
   EnforcedStyle: outdent
 
-Style/LineLength:
+Metrics/LineLength:
   Max: 120
 
 Style/RegexpLiteral:
