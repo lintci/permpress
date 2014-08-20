@@ -24,7 +24,7 @@ describe Permpress::Command do
       it 'generates the expected output' do
         expect{command.run(output)}.to_not exit_successfully
 
-        expect(output.string).to eq("sh: this-command-does-not-exist: command not found\n")
+        expect(output.string).to match(/this-command-does-not-exist/) # Varies by shell and OS
       end
     end
   end
