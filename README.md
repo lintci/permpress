@@ -1,4 +1,5 @@
 # Permpress
+[![Codeship Status for lintci/permpress](https://www.codeship.io/projects/f6b29410-0a8f-0132-55ca-3e7f86a10108/status)](https://www.codeship.io/projects/31800)
 
 A CLI to wrap the inconsistencies of various linters.
 
