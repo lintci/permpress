@@ -10,6 +10,7 @@ require_relative 'checkstyle'
 require_relative 'csslint'
 require_relative 'scsslint'
 require_relative 'jsonlint'
+require_relative 'pylint'
 
 module Permpress
   # Main CLI that controls all other linters
@@ -39,5 +40,9 @@ module Permpress
 
     # JSON
     register Permpress::JSONLint, 'jsonlint', 'jsonlint', 'Invokes durable-json-lint'
+
+    #PyLint
+    register Permpress::PyLint, 'pylint', 'pylint', 'Invokes PyLint'
+
   end
 end
