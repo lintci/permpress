@@ -1,3 +1,2 @@
-def readGameProgress(dontUseThis):
-  level = 0
-  	return level
+def read_game_progress():
+    return 0

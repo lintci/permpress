@@ -4,7 +4,6 @@ require_relative 'command'
 module Permpress
   # Rubocop subcommand. Calls Rubocop with correct arguments.
   class PyLint < Thor
-
     desc 'lint [FILES]', 'Runs linter'
     method_option :config, banner: 'CONFIG_FILE'
 
@@ -15,10 +14,10 @@ module Permpress
   private
 
     def flags
-      [
-        '-r', 'no',
-        '-f', 'parseable',
-      ].tap do |flags|
+      %w(
+        -r no
+        --msg-template "{abspath}:{line}:{column}::{symbol}:{category}:{msg}"
+      ).tap do |flags|
         flags.concat(['--rcfile', options[:config]]) if options[:config]
       end
     end

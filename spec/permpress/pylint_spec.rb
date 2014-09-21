@@ -11,7 +11,7 @@ describe Permpress::PyLint do
           %w(good.py bad.py),
           %w(
             -r no
-            -f parseable
+            --msg-template "{abspath}:{line}:{column}::{symbol}:{category}:{msg}"
             --rcfile pylint.config
           )
         ).and_return(instance_double(Permpress::Command, run: nil))
@@ -25,9 +25,9 @@ describe Permpress::PyLint do
         expect(Permpress::Command).to receive(:new).with(
           'pylint',
           %w(good.py bad.py),
-          %W(
+          %w(
             -r no
-            -f parseable
+            --msg-template "{abspath}:{line}:{column}::{symbol}:{category}:{msg}"
           )
         ).and_return(instance_double(Permpress::Command, run: nil))
 
@@ -47,7 +47,9 @@ describe Permpress::PyLint do
 
         expect($stdout.string).to eq(
           "No config file found, using default configuration\n"\
-          "spec/fixtures/bad.py:3: [E] unexpected indent\n"
+          "************* Module bad\n"\
+          "#{file}:1:0::missing-docstring:convention:Missing module docstring\n"\
+          "#{file}:1:0::missing-docstring:convention:Missing function docstring\n"
         )
       end
     end
