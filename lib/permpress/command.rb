@@ -32,7 +32,7 @@ module Permpress
   private
 
     def flags
-      Shellwords.join(options)
+      options.join(" ")
     end
 
     def arguments
