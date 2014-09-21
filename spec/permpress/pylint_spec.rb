@@ -9,7 +9,7 @@ describe Permpress::PyLint do
         expect(Permpress::Command).to receive(:new).with(
           'pylint',
           %w(good.py bad.py),
-          %W(
+          %w(
             -r no
             -f parseable
             --rcfile pylint.config
